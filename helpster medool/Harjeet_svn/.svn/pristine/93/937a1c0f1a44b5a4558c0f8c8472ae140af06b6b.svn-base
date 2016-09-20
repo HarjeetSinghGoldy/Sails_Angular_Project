@@ -1,0 +1,11 @@
+<br><ul class="nav nav-tabs">
+     	<li><a  ui-sref="emr.notepad">Note Pad</a></li>
+    	<li><a  ui-sref="emr.allergyList">Allergy List</a></li>
+    	<li><a  ui-sref="emr.treatmentPlanTracker">Treatment Plans Trackers</a></li>
+     	<li><a  ui-sref="emr.patientReport">Patient Reports</a></li>
+      	<li><a  ui-sref="emr.pathLabReport">Path Labs Report</a></li>
+       	<li><a  ui-sref="emr.ePrescription">e-Prescription</a></li>
+        <li><a  ui-sref="emr.history">History</a></li>
+        <li><a  ui-sref="emr.billing">Billing</a></li>
+  </ul>
+<div ui-view></div>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HomePage for Medool</title>
+
+  <!-- Viewport mobile tag for sensible mobile support -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+  <!--Added this so the client has access to the csrf tag and it's grabbed first service side on every page -->
+  <script type="text/javascript">
+    window.SAILS_LOCALS = { _csrf: "<%= _csrf %>" };
+  </script>
+
+</head>
+
+<body ng-app="HomepageModule" ng-controller="HomepageController" ng-cloak>
+
+<div class="container-fluid">
+<!--   Creates the navbar 
+  <nav class="navbar navbar-default static-top">
+     This creates the mechanism for collapse button 
+    <button type="button" class="navbar-toggle" data-toggle="collapse" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+       This controls the number of lines in the image when the nav collapse 
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+     This is the brand on the left-hand side. 
+    <a class="navbar-brand" href="/#"> Medool</a>
+    <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
+      <form ng-submit="submitLoginForm()" class="navbar-form navbar-right">
+        <div  class="form-group">
+          <select class="form-control" id="State">
+            <option value="Delhi">Delhi</option>
+            <option value="NCR">NCR</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input ng-model="loginForm.email" type="text" placeholder="Email" name="email" class="form-control">
+        </div>
+        <div class="form-group">
+          <input ng-model="loginForm.password" type="password" placeholder="Password" name="password" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success">
+          <span ng-show="!loginForm.loading">Sign in</span>
+          <span ng-show="loginForm.loading" class="fa fa-spinner"></span>
+          <span ng-show="loginForm.loading">Signing in...</span>
+        </button>
+        <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+        <a href="user/signup" class="btn btn-success">Sign up now!</a>
+      </form>
+  </nav>-->
+</div>
+</div>
+
+<div class="col-md-8 col-md-offset-2">
+  <div>
+    <h2>Looking for Doctor, Pharmacy and PathLab?</h2>
+    <h4>Medool...Connecting to better health</h4>
+    <h2> Search & Book Appointment:</h2>
+   <!-- <section>
+      <div class="btn-group btn-group-justified" role="group">
+        <div class="btn-group" role="group">
+          <button type="button"  class="btn btn-success" ng-click="myclick()" style="font-family: 'Times New Roman';font-size: 1.25em">Doctor</button>
+        </div>
+        <div class="btn-group" role="group">
+          <button type="button"  class="btn btn-success"ng-click="myClick2()"  style="font-family: 'Times New Roman';font-size: 1.25em">Pharmacy</button>
+        </div>
+        <div class="btn-group" role="group">
+          <button type="button"  class="btn btn-success" ng-click="myClick1()"  style="font-family: 'Times New Roman';font-size: 1.25em">PathLab/Diagnostic</button>
+        </div>
+      </div></section>-->
+	  
+	 <ul class="nav nav-tabs">
+     <li class="active"><a data-toggle="tab" href="#doctor">Doctor</a></li>
+     <li><a data-toggle="tab" href="#pharmacy">Pharmacy</a></li>
+     <li><a data-toggle="tab" href="#pathlab">PathLab/Diagnostic</a></li>
+     </ul>
+	  
+	  
+    </br>
+	<div class="tab-content">
+	<!--Doctor tab-->
+    <div id="doctor" class="tab-pane fade in active">
+    <div class="form-group row">
+      <div class="col-sm-6 col-xs-6">
+        <input type="text" placeholder="Location/ Pincode" name="location" class="form-control" />
+      </div>
+      <div class="col-sm-6 col-xs-6"	>
+        <div class="input-group">
+          <input type="text" list="doctors" name="search" class="form-control" placeholder="Specialization, doctor name or clinic name " />
+				<datalist id="doctors">
+					<option value="General Physician">
+					<option value="Dentist">
+					<option value="Gynecologist">
+					<option value="Ear-Nose">
+					<option value="Cardiology">
+					<option value="Homopath">
+					<option value="Ayurveda">
+					<option value="Chest Specialist">
+					<option value="Psychiatrist">
+				</datalist>
+              <span class="input-group-btn">
+                <button class="btn btn-success" type="button" ng-click="search()"><i class="fa fa-search"></i></button>
+                </span>
+        </div>
+      </div>
+    </div>
+	</div>
+	<!--Pharmacy tab-->
+	  <div id="pharmacy" class="tab-pane fade">
+    <div class="form-group row">
+      <div class="col-sm-6 col-xs-6">
+        <input type="text" placeholder="Location/ Pincode" name="location" class="form-control" />
+      </div>
+      <div class="col-sm-6 col-xs-6"	>
+        <div class="input-group">
+          <input type="text" list="pharmacys" name="search" class="form-control" placeholder="Type of pharmacy or name" />
+				<datalist id="pharmacys">
+					<option value="Allopathic">
+					<option value="Homopathic">
+					<option value="Ayurveda">
+					<option value="Generic">
+				</datalist>
+              <span class="input-group-btn">
+                <button class="btn btn-success" type="button"><i class="fa fa-search"></i></button>
+                </span>
+        </div>
+      </div>
+    </div>
+	</div>
+	<!--PathLab tab-->
+	  <div id="pathlab" class="tab-pane fade">
+    <div class="form-group row">
+      <div class="col-sm-6 col-xs-6">
+        <input type="text" placeholder="Location/ Pincode" name="location" class="form-control" />
+      </div>
+      <div class="col-sm-6 col-xs-6"	>
+        <div class="input-group">
+          <input type="text" list="pathlabs" name="search" class="form-control" placeholder="Test name or pathlab name"/>
+				<datalist id="pathlabs">
+					<option value="Ultrasound">
+					<option value="MRI">
+					<option value="X-Ray">
+					<option value="Blood Test">
+				</datalist>
+              <span class="input-group-btn">
+                <button class="btn btn-success" type="button"><i class="fa fa-search"></i></button>
+                </span>
+        </div>
+      </div>
+    </div>
+	</div>
+	
+	</div>
+  </div>
+</div>
+
+
+<!--click on button will trigger doctor,pharmacy & lab-->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3"><span></span>
+    </div>
+    <div class="col-lg-6">
+      <!--this line doctor specialty with icon-->
+      <div ng-show="showDoctor" class="container row ">
+        <div class="col-sm-1">
+          <div>
+            <img src="images/orthopadic.png" class="img-thumbnail" alt="Doctor">
+          </div>
+          <div align="center">Orthopadic</div>
+        </div>
+        <div class="col-sm-1">
+          <img src="images/dentist.png" class="img-thumbnail" alt="Doctor">
+          <span class="middle"><div align="center">Dentist</div></span>
+        </div>
+        <div class="col-sm-1">
+          <img src="images/otology.png" class="img-thumbnail" alt="Doctor">
+          <span class="middle"><div align="center">Otology</div></span>
+        </div>
+        <div class="col-sm-1">
+          <img src="images/heart.jpg" class="img-thumbnail" alt="Doctor">
+          <span class="middle"><div align="center">Cardiology</div></span>
+        </div>
+        <div class="col-sm-1">
+          <img src="images/eye.png" class="img-thumbnail" alt="Doctor">
+          <span class="middle"><div align="center">Ophthalmology</div></span>
+        </div>
+        <div class="col-sm-1">
+          <img src="images/Radiology.png" class="img-thumbnail" alt="Doctor">
+          <span class="middle"><div align="center">Radiology</div></span>
+        </div>
+      </div>
+
+
+      <!-- this line for Lab and its icon-->
+      <div ng-show="showLab" class="container row">
+        <div class="col-sm-1">
+          <div>
+            <img src="images/ultrasound.jpg" class="img-thumbnail" alt="Labs">
+          </div>
+          <div align="center">Ultrasound</div>
+        </div>
+        <div class="col-sm-1">
+          <img src="images/mri.png" class="img-thumbnail" alt="Labs">
+          <span class="middle"><div align="center">MRI</div></span>
+        </div>
+        <div class="col-sm-1">
+          <img src="images/xray.png" class="img-thumbnail" alt="Labs">
+          <span class="middle"><div align="center">X-Ray</div></span>
+        </div>
+        <div class="col-sm-1">
+          <img src="images/blood.jpg" class="img-thumbnail" alt="Labs">
+          <span class="middle"><div align="center">Blood Test</div></span>
+        </div>
+      </div>
+      <!-- this line for Pharmacy and its icon-->
+
+      <div ng-show="showPharmacy" class="container row">
+        <div class="col-sm-1">
+          <div>
+            <img src="images/ayurvedic.png" class="img-thumbnail" alt="Pharmacy">
+          </div>
+          <div align="center">Ayurveda</div>
+        </div>
+        <div class="col-sm-1">
+          <img src="images/generic.jpg" class="img-thumbnail" alt="Pharmacy">
+          <span class="middle"><div align="center">Generic</div></span>
+        </div>
+        <div class="col-sm-1">
+          <img src="images/homo.jpg" class="img-thumbnail" alt="Pharmacy">
+          <span class="middle"><div align="center">Homopathic</div></span>
+        </div>
+        <div class="col-sm-1">
+          <img src="images/pharmacy.jpg" class="img-thumbnail" alt="Pharmacy">
+          <span class="middle"><div align="center">Allopathic</div></span>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+ <!--footer-->
+<div class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+    <h3>Copyright medool.com</h3>
+  </div>
+</div>
+<!--//Hahahhahaah-->
+
+</body>
+</html>

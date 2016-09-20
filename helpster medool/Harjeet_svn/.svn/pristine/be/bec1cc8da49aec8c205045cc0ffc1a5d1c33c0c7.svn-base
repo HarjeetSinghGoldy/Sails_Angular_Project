@@ -1,0 +1,6 @@
+<br><ul class="nav nav-tabs">
+  <li ui-sref-active="active"><a ui-sref="clinicTab.basicinfo">Basic Information</a></li>
+  <li ui-sref-active="active"><a ui-sref="clinicTab.Tools">Tools</a></li>
+  <li ui-sref-active="active"><a ui-sref="clinicTab.staff">Staff</a></li>
+</ul>
+<div ui-view></div>

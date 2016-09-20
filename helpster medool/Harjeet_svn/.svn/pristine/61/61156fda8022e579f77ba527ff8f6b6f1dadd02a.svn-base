@@ -1,0 +1,30 @@
+<!--<form action="/user/update/<%= user.id%>" method="post" class="form-signin form-group">
+    <h2>Hey this is editing user </h2>
+    
+    <input value="<%= user.name%>" name="name" type="text" class="form-control">
+    <input value="<%= user.title%>" name="name" type="text" class="form-control">
+    <input value="<%= user.email%>" name="name" type="text" class="form-control">
+    <input value="Proceed" name="name" type="submit" class="btn btn-lg btn-primary btn-block">
+    <input value="<%_csrf%>" name="_csrf" type="hidden">
+    
+</form>-->
+
+	<form action="/user/update/<%= user.id %>" method="POST" class="form-signin">
+		<h2> This is user edit page Underconstruction</h2>
+
+		<input value="<%= user.firstname %>" name="name" type="text" class="form-control"/>
+		<input value="<%= user.lastname %>" name="name" type="text" class="form-control"/>
+		<input value="<%= user.title %>" name="title" type="text" class="form-control"/>
+		<input value="<%= user.email %>" name="email" type="text" class="form-control"/>
+		<% if (session.authenticated && session.User.admin) { %>
+			<% if (user.admin) { %>
+				<input type="hidden" name="admin" value="unchecked">
+				<label class="checkbox"><input type="checkbox" name="admin" checked> Admin</label>
+			<% } else { %>
+				<input type="hidden" name="admin" value="unchecked">
+				<label class="checkbox"><input type="checkbox" name="admin"> Admin</label>
+			<% } %> 
+		<% } %> 
+		<input type="submit" value="Proceed" class="btn btn-lg btn-primary btn-block"/>
+		<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+	</form>

@@ -1,0 +1,28 @@
+<h2>Path Labs Report</h2>
+ <br>
+<div class="table-resposive">
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th>Report#</th>
+        <th>Patient</th>
+        <th>DOB</th>
+        <th>Recd.Date</th>
+        <th>Reason</th>
+        <th>Returned Date</th>
+        <th>Pathologist</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td>IM-09-604</td>
+        <td>Anna</td>
+        <td>02/12/1990</td>
+        <td>11/01/2016</td>
+        <td>N/A</td>
+        <td>10/01/2016</td>
+        <td>Tnimaaa</td>
+      </tr>
+    </tbody>
+    </table>
+</div>

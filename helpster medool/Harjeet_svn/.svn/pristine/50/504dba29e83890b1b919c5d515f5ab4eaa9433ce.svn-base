@@ -1,0 +1,41 @@
+ <h2>Qualification</h2>
+  <ul class="nav nav-tabs">
+     <li><a data-toggle="tab" href="#personalDetails">Personal Details</a></li>
+    <li class="active"><a data-toggle="tab" href="#qualification">Qualification</a></li>
+    <li><a data-toggle="tab" href="#address">Address</a></li>
+    <li><a data-toggle="tab" href="#timetable">Practice Time Table</a></li>
+  </ul>
+  <form role="form" style="margin: 10px;" > 
+    <div class="form-group col-sm-6">
+        <input type="text" class="form-control" name="specilization" placeholder="Specilization">
+    </div>
+    <div class="form-group col-sm-6">
+        <input type="text" class="form-control" name="degree" placeholder="Degree">
+    </div>
+       <div class="form-group col-sm-6">
+        <input type="text" class="form-control" name="mcinumber" placeholder="MCINumber">
+    </div>
+    <div class="form-group col-sm-6">
+        <input type="text" class="form-control" name="college" placeholder="CollegePassedOut or Insitute Name">
+    </div>   
+     <div class="form-group col-sm-6">
+        <input type="number" class="form-control" name="passoutyear" placeholder="Passed out year">
+    </div>
+      <div class="form-group col-sm-6">
+        <input type="text" class="form-control" name="otherqualification" placeholder="OtherCertification">
+    </div>
+     <div class="form-group col-sm-6">
+        <input type="number" class="form-control" name="experience" placeholder="ExperienceYear">
+    </div>
+     <div class="form-group col-sm-6">
+        <input type="text" class="form-control" name="presentemployee" placeholder="PresentEmployer">
+    </div>
+       <div class="form-group col-sm-6">
+        <input type="text" class="form-control" name="pastemployee" placeholder="PastEmployer">
+    </div>
+     <div class="col-sm-12">
+     <button type="button" class="btn btn-success">Update</button>
+     </div>
+  </form>
+
+

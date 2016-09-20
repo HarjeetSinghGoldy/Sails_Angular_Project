@@ -1,0 +1,109 @@
+<style>
+    /*Profile-v2*/
+.bg-picture {
+  position: relative;
+  min-height: 300px;
+  margin: -20px -25px 0px -25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.bg-picture>.bg-picture-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+ 
+}
+.bg-picture>.meta.bottom {
+  bottom: 10px;
+}
+.bg-picture>.meta {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.box-layout {
+  display: table!important;
+  width: 100%;
+  table-layout: fixed;
+  border-spacing: 0;
+}
+
+
+</style>
+
+
+
+ <div class="wraper container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="bg-picture" style="background-image:url('images/doctorimage.jpg');">
+                          <span class="bg-picture-overlay"></span><!-- overlay -->
+                          <!-- meta -->
+                          <div class="box-layout meta bottom">
+                            <div class="col-sm-6 clearfix">
+                              <span class="img img-thumbnail img-wrapper pull-left m-r-15"><img src="images/doctorimage.jpg" alt="" style="width:100px; height: 100px;" class="br-radius"></span>
+                              <div class="media-body">
+                                
+                                
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+
+                              <div class="pull-right">
+                                <div class="dropdown">
+                                     <a class="btn btn-medium btn-primary" href="/user/edit/<%=user.id%>">Edit</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!--/ meta -->
+                        </div>
+                    </div>
+                </div>
+                 <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="3"><h3>Contact Information</h3></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><b>Name</b></td>
+                                                    <td>
+                                                     {{user.firstname +'&nbsp;'+ user.lastname}}
+                                                     
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><b>Email</b></td>
+                                                    <td>
+                                                    <a href="" class="ng-binding">
+                                                        {{user.email}}
+                                                    </a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><b>Phone</b></td>
+                                                    <td class="ng-binding">{{user.mobile}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><b>Skype</b></td>
+                                                    <td>
+                                                    <a href="" class="ng-binding">
+                                                        -
+                                                    </a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+
+
+
+
+
+
+
+

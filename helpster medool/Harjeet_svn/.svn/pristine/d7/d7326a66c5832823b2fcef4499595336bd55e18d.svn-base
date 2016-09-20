@@ -1,0 +1,5 @@
+<br><ul class="nav nav-tabs">
+    <li ui-sref-active="active"><a  ui-sref="schedulerTab.scheduler">Scheduler</a></li>
+    <li ui-sref-active="active"><a  ui-sref="schedulerTab.appointment">Appointment</a></li>
+</ul>
+<div ui-view></div>

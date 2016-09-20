@@ -1,0 +1,5 @@
+<div ng-controller="DashboardController">
+<h1>Welcome to dashboard</h1>
+<hr>
+<h5>{{ message }}</h5>
+</div>

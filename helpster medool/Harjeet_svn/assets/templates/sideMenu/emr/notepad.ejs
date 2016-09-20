@@ -1,0 +1,117 @@
+
+<div class="" style="padding: 25px;">
+    <div class="panel panel-default" >
+        <div class="panel-heading">NotePad</div>
+        <div class="panel-body" style="background-image:url('images/not.jpg');">
+             
+<form role="form" style="margin: 10px;" >
+      
+    <div class="form-group col-sm-6">
+        <label>Complaint: </label>
+        <input type="text" class="form-control" name="complaint" placeholder="Complaint">
+    </div>
+    <div class="form-group col-sm-6">
+         <label>Observation: </label>
+        <input type="text" class="form-control" name="observation" placeholder="Observation">
+    </div>
+       <div class="form-group col-sm-6">
+           <label>Investigation: </label>
+        <input type="text" class="form-control" name="investigation" placeholder="Investigation">
+    </div>
+    <div class="form-group col-sm-6">
+        <label>Diagnoses: </label>
+        <input type="text" class="form-control" name="diagnoses" placeholder="Diagnoses">
+    </div> 
+      <div class="form-group col-sm-6">
+           <label>Treatment plan: </label>
+        <input type="text" class="form-control" name="treatment" placeholder="Treatment">
+    </div>
+    <div class="form-group col-sm-6">
+        <label>Treatment Level: </label>
+        <input type="text" class="form-control" name="level" placeholder="Treatment level">
+    </div>   
+    <div class="form-group col-sm-6">
+        <label>Treatment cost: </label>
+        <input type="text" class="form-control" name="cost" placeholder="Cost">
+    </div>
+    <div class="form-group col-sm-6">
+        <label>Treatment Status: </label>
+        <input type="text" class="form-control" name="status" placeholder="Status">
+    </div>
+
+	
+    <div  class="form-group col-sm-6">
+         <label>Blood Sugar: </label>
+      <div class="form-group form-inline row" style="margin-left:0px; margin-right:0px;">
+            <div class="form-group form-inline " style="margin-left:0px; margin-right:0px;">
+              <select class="form-control col-sm-4">
+                    <option value="0">F</option>
+              </select>
+            </div>
+            <div class="form-group form-inline " style="margin-left:0px; margin-right:0px;">
+               <select class="form-control col-sm-4">
+                    <option value="0">PP</option>
+               </select>
+            </div>
+            <div class="form-group form-inline " style="margin-left:0px; margin-right:0px;">
+               <select class="form-control col-sm-4">
+                     <option value="0">R</option>
+               </select>
+            </div>
+      </div> 
+  </div>
+      <div  class="form-group col-sm-6">
+          <div class="row">
+              <div class="col-sm-4">
+         <label>Blood Pressure: </label>
+      <div class="form-group form-inline row" style="margin-left:0px; margin-right:0px;">
+            <div class="form-group form-inline " style="margin-left:0px; margin-right:0px;">
+              <select class="form-control col-sm-4">
+                    <option value="0"></option>
+              </select>
+            </div>
+            <div class="form-group form-inline " style="margin-left:0px; margin-right:0px;">
+               <select class="form-control">
+                    <option value="0"></option>
+               </select>
+            </div>
+      </div> 
+              </div>
+              <div class="col-sm-4" ng-controller="myCtrlday">
+                   <label>Height(Cm):</label>
+               <select class="form-control">
+                   <option>ht</option>
+                    <option ng-model="x" ng-repeat="x in range">{{x}}</option>
+               </select>
+          </div>
+               <div class="col-sm-4">
+                    <label>Weight(Kg):</label>
+               <select class="form-control">
+                    <option value="0"></option>
+               </select>
+          </div>
+  </div>
+      </div>
+    
+    
+   <div class="col-sm-6">
+     <button type="button" class="btn btn-success">Submit</button>
+      <button type="button" class="btn btn-success glyphicon glyphicon-print "></button>
+    </div>
+      <div class="col-sm-6">
+      <div class="row">
+        <div class="col-sm-6">
+        <input class="input-sm input-success" type = "file" file-model = "myFile" ng-controller = "myCtrl"/>
+        </div>
+        <div class="col-sm-6">
+        <button class="btn btn-success" ng-click = "uploadFile()">upload me</button>
+        </div>
+      </div>
+         
+         
+      </div>
+  </form>
+        </div>
+        <div class="panel-footer"></div>
+    </div>
+</div>

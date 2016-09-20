@@ -1,0 +1,95 @@
+<style>
+    .img-hover img {
+    -webkit-transition: all .3s ease; /* Safari and Chrome */
+  	-moz-transition: all .3s ease; /* Firefox */
+  	-o-transition: all .3s ease; /* IE 9 */
+  	-ms-transition: all .3s ease; /* Opera */
+  	transition: all .3s ease;
+       
+}
+.img-hover img:hover {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform:translateZ(0) scale(1.20); /* Safari and Chrome */
+    -moz-transform:scale(1.20); /* Firefox */
+    -ms-transform:scale(1.20); /* IE 9 */
+    -o-transform:translatZ(0) scale(1.20); /* Opera */
+    transform:translatZ(0) scale(1.20);
+   
+}
+
+</style>
+<!--<div ng-controller="DashboardController">
+<h1>Welcome to dashboard</h1>
+<hr>
+<h5>{{ message }}</h5>
+<a ui-sref="schedulerTab.scheduler">hello</a>-->
+<br><div>
+
+  <div class="row">
+  
+    <div class="col-md-4 img-hover">
+    
+        <a ui-sref="schedulerTab.scheduler"><img class="img-responsive img-thumbnail" style="width:250px;height:120px;" src="images/dashboardImages/scheduler.png"></a>
+    
+    </div>
+       <div class="col-md-4 img-hover">
+    
+        <a ui-sref="patient"><img class="img-responsive img-thumbnail" style="width:250px;height:120px;" src="images/dashboardImages/np.png"></a>
+    
+    </div>
+       <div class="col-md-4 img-hover">
+    
+        <a ui-sref="clinicTab.basicinfo"><img class="img-responsive img-thumbnail" style="width:250px;height:120px;" src="images/dashboardImages/cliniC.png"></a>
+    
+    </div>
+       
+      
+       
+  
+  </div><br>
+   <div class="row">
+  
+    <div class="col-md-4 img-hover">
+    
+        <a ui-sref="data"><img class="img-responsive img-thumbnail" style="width:250px;height:120px;" src="images/dashboardImages/datA.png"></a>
+    
+    </div>
+       <div class="col-md-4 img-hover">
+    
+        <a ui-sref="emr.notepad"><img class="img-responsive img-thumbnail" style="width:250px;height:120px;" src="images/dashboardImages/emR.png"></a>
+    
+    </div>
+       <div class="col-md-4 img-hover">
+    
+        <a ui-sref="pathLab"><img class="img-responsive img-thumbnail" style="width:250px;height:120px;" src="images/dashboardImages/pathology.png"></a>
+    
+    </div>
+       
+      
+       
+  
+   </div><br>
+   <div class="row">
+  
+    <div class="col-md-4 img-hover">
+    
+        <a ui-sref="emr.ePrescription"><img class="img-responsive img-thumbnail" style="width:250px;height:120px;" src="images/dashboardImages/e-prescription-pills.png"></a>
+    
+    </div>
+       <div class="col-md-4 img-hover">
+    
+        <a ui-sref="billingSideMenu"><img class="img-responsive img-thumbnail" style="width:250px;height:120px;" src="images/dashboardImages/billing.png"></a>
+    
+    </div>
+       <div class="col-md-4 img-hover">
+    
+        <a ui-sref="pharmacy"><img class="img-responsive img-thumbnail" style="width:250px;height:120px;" src="images/dashboardImages/phar.png"></a>
+    
+    </div>
+       
+      
+       
+  
+  </div>
+</div>

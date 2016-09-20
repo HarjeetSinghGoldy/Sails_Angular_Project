@@ -1,0 +1,158 @@
+<!--  Created by Gaurav Rathi. -->
+
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>Medool | Welcome back, <%= me.firstname %>!</title>
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/angular-bootstrap-calendar.min.css">
+    <link rel="stylesheet" href="/styles/angular-toastr.css">
+    <link rel="stylesheet" href="/styles/bill.css">
+    <link rel="stylesheet" href="/styles/bootstrap.3.1.1.css">
+    <link rel="stylesheet" href="/styles/bootstrap.css">
+    <link rel="stylesheet" href="/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/desktop.css">
+    <link rel="stylesheet" href="/styles/importer.css">
+    <link rel="stylesheet" href="/styles/rzslider.css">
+    <link rel="stylesheet" href="/styles/search-doc.css">
+    <link rel="stylesheet" href="/styles/slider.css">
+    <link rel="stylesheet" href="/styles/timetable.css">
+    <link rel="stylesheet" href="/styles/tool.css">
+    <link rel="stylesheet" href="/styles/xeditable.css">
+    <!--STYLES END-->
+    <!--Added this so the client has access to the csrf tag and it's grabbed first service side on every page -->
+    <script type="text/javascript">
+    window.SAILS_LOCALS = {
+      _csrf: '<%= _csrf %>',
+      me: <%- JSON.stringify(me) %>
+    };
+    </script>
+  </head>
+  <body  ng-app="DashboardModule" >
+  
+  <div id="wrapper">
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-static-top" style="margin-bottom: 0">
+    <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+         <a class="navbar-brand" href="#">Dashboard</a>
+    </div>
+    <!-- /.navbar-header -->
+    <ul class="nav navbar-top-links navbar-right">
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href=""><span class="glyphicon glyphicon-envelope"></span>&nbsp; <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Page 1-1</a></li>
+          <li><a href="#">Page 1-2</a></li>
+          <li><a href="#">Page 1-3</a></li>
+        </ul>
+      </li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href=""><span class="glyphicon glyphicon-bell"></span>&nbsp; <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Page 1-1</a></li>
+          <li><a href="#">Page 1-2</a></li>
+          <li><a href="#">Page 1-3</a></li>
+        </ul>
+      </li>
+       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span><img src="images/user.png" class="img-thumbnail" height="25" width="25" style="margin: 0">&nbsp;&nbsp;Dr.<%= me.firstname%></span>&nbsp;<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a ui-sref="userProfile"><span class="glyphicon glyphicon-user"></span>&nbsp;User profile</a></li>
+            <li><a ui-sref="setting"><span class="glyphicon glyphicon-cog"></span>&nbsp;Setting</a></li>
+            <li><a ui-sref="editProfile.personalDetails"><span class="glyphicon glyphicon-edit"></span> Edit profile</a></li>
+            <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Log out</a></li>
+            
+        </ul>
+      </li>
+
+    </ul><br>
+ <div class="navbar-default sidebar" role="navigation">
+        <div class="sidebar-nav navbar-collapse">
+       <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <span class="glyphicon glyphicon-search"></span></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li> <!-- sidebar search -->
+        <li><a  ui-sref="dashboard"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a></li>
+        <li><a  ui-sref="schedulerTab.scheduler"><span class="glyphicon glyphicon-calendar"></span> Schedular</a></li>
+        <li><a  ui-sref="patient"><span class="glyphicon glyphicon-edit"></span> Patient</a></li>
+        <li><a  ui-sref="emr.notepad" data-ng-class="{ active: $state.includes('emr.notepad') }"><span class="glyphicon glyphicon-edit"></span> EMR</a></li>
+        <li><a  ui-sref="clinicTab.basicinfo"><span class="glyphicon glyphicon-edit"></span> Clinic</a></li>
+        <li><a  ui-sref="pathLab"><span class="glyphicon glyphicon-edit"></span> Path Labs</a></li>
+        <li><a  ui-sref="data"><span class="glyphicon glyphicon-edit"></span> Data</a></li>
+        <li><a  ui-sref="emr.ePrescription"><span class="glyphicon glyphicon-edit"></span> e-Prescription</a></li>
+        <li><a  ui-sref="pharmacy"><span class="fa fa-medkit"></span> Pharmacy</a></li>
+        <li><a  ui-sref="billingSideMenu"><span class="fa fa-inr"></span> Billing</a></li>     
+      </ul>  <!-- side menu -->
+        </div> <!--sidebar second -->
+ </div> <!--side bar close -->
+</nav> <!-- Navigation close -->
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-sm-12">
+      
+           <div ui-view> </div>
+
+            </div><!-- close co-sm-12 -->
+        </div> <!-- cloes row -->
+  </div><!-- #page-wrapper -->
+</div><!--#wrapper -->
+   
+<!--
+<<<<<<< .mine -->
+    <!--SCRIPTS-->
+    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/dependencies/moment.min.js"></script>
+    <script src="/js/dependencies/interact.min.js"></script>
+    <script src="/js/dependencies/angular.js"></script>
+    <script src="/js/dependencies/angular-animate.js"></script>
+    <script src="/js/dependencies/angular-bootstrap-calendar-tpls.min.js"></script>
+    <script src="/js/dependencies/jquery.min.js"></script>
+    <script src="/js/dependencies/angular-mocks.js"></script>
+    <script src="/js/dependencies/angular-route.js"></script>
+    <script src="/js/dependencies/angular-toastr.js"></script>
+    <script src="/js/dependencies/angular-ui-router.min.js"></script>
+    <script src="/js/dependencies/angular-ui.js"></script>
+    <script src="/js/dependencies/angular.1.3.js"></script>
+    <script src="/js/dependencies/bootstrap.js"></script>
+    <script src="/js/dependencies/compareTo.module.js"></script>
+    <script src="/js/dependencies/main.js"></script>
+    <script src="/js/dependencies/metisMenu.min.js"></script>
+    <script src="/js/dependencies/rzslider.js"></script>
+    <script src="/js/dependencies/ui-bootstrap-tpls.min.js"></script>
+    <script src="/js/dependencies/xeditable.js"></script>
+    <script src="/js/public/signup/SignupModule.js"></script>
+    <script src="/js/private/dashboard/DashboardModule.js"></script>
+    <script src="/js/public/homepage/HomepageModule.js"></script>
+    <script src="/js/public/search/searchDocModule.js"></script>
+    <script src="/js/private/dashboard/BillingController.js"></script>
+    <script src="/js/private/dashboard/DashboardController.js"></script>
+    <script src="/js/private/dashboard/PersonalDetailController.js"></script>
+    <script src="/js/private/dashboard/SchedulerController.js"></script>
+    <script src="/js/private/dashboard/TimeTableController.js"></script>
+    <script src="/js/private/dashboard/UserProfileController.js"></script>
+    <script src="/js/private/dashboard/appointmentController.js"></script>
+    <script src="/js/private/dashboard/helpers.js"></script>
+    <script src="/js/private/dashboard/messageController.js"></script>
+    <script src="/js/private/dashboard/staffController.js"></script>
+    <script src="/js/private/dashboard/toolsController.js"></script>
+    <script src="/js/private/patientDasboard/patientDashboardController.js"></script>
+    <script src="/js/private/patientDasboard/patientDashboardRouting.js"></script>
+    <script src="/js/public/homepage/HomepageController.js"></script>
+    <script src="/js/public/search/searchDocController.js"></script>
+    <script src="/js/public/signup/SignupController.js"></script>
+    <!--SCRIPTS END-->
+
+  </body>
+</html>

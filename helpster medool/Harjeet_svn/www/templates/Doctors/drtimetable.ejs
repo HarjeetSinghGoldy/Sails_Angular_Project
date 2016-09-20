@@ -1,0 +1,29 @@
+ <h2> Practice Time Table</h2><h5>Define your timetable slots here...</h5>
+
+<div ng-controller="TimeTableController">
+    <uib-tabset>
+        <uib-tab ng-repeat="workspace in workspaces"  active=workspace.active>
+            
+             <uib-tab-heading >
+                 {{workspace.name}}
+                 
+                  <button class="btn btn-danger " ng-click="removeWorkspace($index+1)">X</button>
+            </uib-tab-heading>
+            
+            <div ng-controller="ChildTimeTableController">
+                <div>
+                    {{$parent.workspace.id}} : {{ $parent.workspace.name}}
+                    
+                </div>
+                <input type="text" ng-model="workspace.name"/>
+               <div data-my-timetable="" data-slots="slots"></div>
+            </div>     
+        </uib-tab>
+        <uib-tab select="addWorkspace()">
+            <uib-tab-heading>
+                <i class="icon-plus-sign">( + )</i>
+            </uib-tab-heading>
+        </uib-tab>
+        
+    </uib-tabset>
+</div>

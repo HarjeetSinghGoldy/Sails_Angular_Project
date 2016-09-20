@@ -1,0 +1,58 @@
+
+ <br>
+  <div class="">
+  <div class="row">
+   
+      <div class="panel panel-success col-sm-4 well" ng-controller="MedController">
+      <div class="panel-heading">Medicine</div>
+         <div class="panel-body">           
+           <div draggable="true" ng-repeat="drag_type in drag_types">{{drag_type.name}}</div>
+         </div>
+      
+    </div>
+   
+       <div class="panel panel-warning col-sm-4 well" ng-controller="freqController">
+       <div class="panel-heading">Frequency</div>
+         <div class="panel-body">         
+           <div draggable="true" ng-repeat="freq in freqs">{{freq.name1}}</div>
+         </div>
+       
+    </div>
+    
+      <div class="panel panel-danger col-sm-4 well" ng-controller="daysController">
+      <div class="panel-heading">Days</div>
+         <div class="panel-body">
+        <div draggable="true" ng-repeat="day in days">{{day.name}}</div>
+     </div>
+       </div>
+  
+  </div>
+  <div class="row">
+    <div class="col-sm-4 well" droppable="true" ng-controller="MedController">
+      <div class="panel panel-success text-center" >
+      <div class="panel-heading">Medicine</div>
+         <!--<span ng-repeat="name in items" ng-class="{current: selected == $index }" >-->
+         <span ng-show="$index != 0"></span>
+         <ul ng-repeat="name in items" class="list-group">
+            <li class="list-group-item">{{name}}</li>
+         </ul>
+       </div>
+    </div>
+    <div class="col-sm-4 well" droppable="true" ng-controller="freqController">
+      <div class="panel panel-warning text-center" >
+      <div class="panel-heading">Frequency</div>
+         <span ng-show="$index != 0"></span>
+         <ul ng-repeat="name1 in items" class="list-group"><li class="list-group-item">
+             {{name1}}</li></ul>
+       </div>
+    </div>
+    <div class="col-sm-4 well" droppable="true" ng-controller="daysController">
+      <div class="panel panel-danger text-center">
+      <div class="panel-heading">Days</div>
+         <span ng-show="$index != 0"></span>
+         <ul ng-repeat="name in items" class="list-group"><li class="list-group-item">
+             {{name}}</li></ul>
+       </div>
+    </div>
+  </div>
+</div>

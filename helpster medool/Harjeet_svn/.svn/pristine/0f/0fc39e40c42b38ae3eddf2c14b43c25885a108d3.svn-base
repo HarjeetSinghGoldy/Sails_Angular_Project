@@ -1,0 +1,74 @@
+
+ <form role="form" style="margin: 10px;" >
+
+    <div >
+   <label><u>Food Allergies</u></label>
+    </div>
+   <div class="form-group col-sm-6">
+
+     <input type="text" class="form-control" name="Allergic" placeholder="Allergen">
+   </div>
+   <div class="form-group col-sm-6">
+
+     <input type="text" class="form-control" name="Medicine" placeholder="Medicine Prescribed">
+   </div>
+
+   <div>
+   <label><u>Natural/Seasonal Allergies</u></label>
+   </div>
+   <div class="form-group col-sm-6">
+
+     <input type="text" class="form-control" name="Allergic" placeholder="Allergen">
+   </div>
+   <div class="form-group col-sm-6">
+
+     <input type="text" class="form-control" name="Medicine" placeholder="Medicine Prescribed">
+   </div>
+
+
+    <div>
+   <label><u>Animals</u></label>
+    </div>
+   <div class="form-group col-sm-6">
+
+     <input type="text" class="form-control" name="Allergic" placeholder="Allergen">
+   </div>
+   <div class="form-group col-sm-6">
+
+     <input type="text" class="form-control" name="Medicine" placeholder="Medicine Prescribed">
+   </div>
+
+    <div>
+   <label><u>Medicinal Allergies</u></label>
+    </div>
+   <div class="form-group col-sm-6">
+
+     <input type="text" class="form-control" name="Allergic" placeholder="Allergen">
+   </div>
+   <div class="form-group col-sm-6">
+
+     <input type="text" class="form-control" name="Medicine" placeholder="Medicine Prescribed">
+   </div>
+
+    <div>
+   <label><u>Other Allergies</u></label>
+    </div>
+   <div class="form-group col-sm-6">
+
+     <input type="text" class="form-control" name="Allergic" placeholder="Allergen">
+   </div>
+   <div class="form-group col-sm-6">
+
+     <input type="text" class="form-control" name="Medicine" placeholder="Medicine Prescribed">
+   </div>
+
+
+
+
+   <div class="col-sm-12">
+     <button type="button" class="btn btn-success">Submit</button>
+   </div>
+ </form>
+
+
+

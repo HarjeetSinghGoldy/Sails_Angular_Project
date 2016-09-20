@@ -1,0 +1,55 @@
+<br><div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading pointer">
+      <h4 class="panel-title" data-toggle="collapse" data-target="#Treatmentplanandtrackers">
+        Treatment plan and trackers
+      </h4>
+    </div>
+     <div class="panel-collapse collapse" id="Treatmentplanandtrackers">
+        <div class="panel-body">
+            
+        </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading pointer">
+      <h4 class="panel-title" data-toggle="collapse" data-target="#Previoustreatmentandprescription">
+       
+        Previous treatment and prescription
+      </h4>
+    </div>
+    <div class="panel-collapse collapse" id="Previoustreatmentandprescription">
+      <div class="panel-body">
+          
+          <table class="table table-hover">
+                <thead>
+                    <tr>
+                     
+                         <th>Chief Complaint</th>
+                         <th>Oral Examination</th>
+                         <th>Treatment Plan</th>
+                         <th>Work Done</th>
+                         <th>Treatment Date</th>
+                         <th>Treatment Fee</th>
+                         <th>Delete</th>
+                         <th>Medicine</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>####</td>
+                        <td>####</td>
+                        <td>####</td>
+                        <td>####</td>
+                        <td>####</td>
+                        <td>####</td>
+                        <td>####</td>
+                        <td>####</td>
+                    </tr>
+                </tbody>
+            </table>
+
+    </div>
+  </div>
+</div>
+</div>
